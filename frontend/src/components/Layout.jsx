@@ -91,17 +91,6 @@ const Layout = () => {
 
             {/* Right side */}
             <div className="flex items-center gap-2.5 flex-shrink-0">
-              {/* Install App Button */}
-              {deferredPrompt && (
-                <button
-                  onClick={handleInstallClick}
-                  className="hidden xl:flex h-10 px-4 items-center gap-2 rounded-[14px] bg-gradient-to-r from-emerald-500 to-emerald-400 text-white font-bold shadow-[0_4px_15px_rgba(16,185,129,0.3)] hover:shadow-[0_4px_25px_rgba(16,185,129,0.5)] hover:-translate-y-0.5 transition-all animate-[fadeIn_0.5s_ease-out]"
-                  aria-label="Install App"
-                >
-                  <Download size={16} /> Install App
-                </button>
-              )}
-
               {/* Theme Toggle */}
               <button
                 onClick={toggleTheme}
@@ -197,11 +186,6 @@ const Layout = () => {
                 </>
               )}
               {user?.role === "admin" && <NavLink to="/admin" className={navLink}>Admin</NavLink>}
-              {deferredPrompt && (
-                <button onClick={handleInstallClick} className="flex items-center gap-1.5 rounded-xl px-4 py-2 text-sm font-bold text-emerald-700 bg-emerald-100 hover:bg-emerald-200 transition-all flex-shrink-0">
-                  <Download size={14} /> Install App
-                </button>
-              )}
               {user && (
                 <button onClick={handleLogout} className="flex items-center gap-1.5 rounded-xl px-4 py-2 text-sm font-bold text-coral bg-coral/10 hover:bg-coral/20 transition-all flex-shrink-0">
                   <LogOut size={14} /> Logout
@@ -216,6 +200,17 @@ const Layout = () => {
         <Outlet />
       </main>
       <Footer />
+
+      {/* Floating Install App Button */}
+      {deferredPrompt && (
+        <button
+          onClick={handleInstallClick}
+          className="fixed bottom-6 left-6 z-50 flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-emerald-400 px-5 py-3 text-sm font-black text-white shadow-[0_8px_30px_rgba(16,185,129,0.4)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.6)] hover:-translate-y-1 transition-all duration-300 animate-[slideUp_0.5s_ease-out]"
+          aria-label="Install App"
+        >
+          <Download size={18} /> Install AULoop App
+        </button>
+      )}
     </div>
   );
 };
