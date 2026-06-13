@@ -29,7 +29,6 @@ const listingSchema = new mongoose.Schema(
     seller: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
     status: { type: String, enum: ["available", "reserved", "sold", "hidden"], default: "available" },
     hiddenReason: { type: String, trim: true, default: "" },
-    removedReason: { type: String, trim: true, default: "" },
     campusMeetupSpots: [{ type: String, trim: true }],
     tags: [{ type: String, trim: true }],
     wishlistBy: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],

@@ -5,7 +5,7 @@ import User from "../models/User.js";
 import Notification from "../models/Notification.js";
 import { calculateQualityScore } from "../utils/listingQuality.js";
 import { sendSocketNotification } from "../socket/index.js";
-
+import { updateUserBadges } from "../utils/badgeManager.js";
 const uploadToCloudinary = (file, resourceType = "auto") =>
   new Promise((resolve, reject) => {
     const stream = cloudinary.uploader.upload_stream(
@@ -164,7 +164,7 @@ export const getListing = async (req, res, next) => {
       
       if (finalSoldTo) {
         await User.findByIdAndUpdate(listing.seller, { $inc: { completedSales: 1 } });
-        
+        await updateUserBadges(listing.seller);        
         // Create notifications for both seller and buyer
         // Notification for seller
         const saleNotif = await Notification.create({

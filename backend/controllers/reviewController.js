@@ -1,7 +1,7 @@
 import Listing from "../models/Listing.js";
 import Review from "../models/Review.js";
 import User from "../models/User.js";
-
+import { updateUserBadges } from "../utils/badgeManager.js";
 const recalculateSellerTrust = async (sellerId) => {
   const reviews = await Review.find({ seller: sellerId });
   const seller = await User.findById(sellerId);
@@ -20,6 +20,7 @@ const recalculateSellerTrust = async (sellerId) => {
   seller.reviewCount = reviews.length;
   seller.trustScore = trustScore;
   await seller.save();
+  await updateUserBadges(sellerId);
   return seller;
 };
 
