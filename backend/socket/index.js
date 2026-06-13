@@ -16,7 +16,7 @@ export const sendSocketNotification = (userId, notification) => {
 export const configureSocket = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: (process.env.CLIENT_URL || "http://localhost:5173").split(",").map((origin) => origin.trim()),
+      origin: (process.env.CLIENT_URL || "https://au-loop.vercel.app").split(",").map((origin) => origin.trim()),
       credentials: true
     }
   });
