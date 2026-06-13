@@ -12,7 +12,7 @@ import Footer from "./Footer";
 import CursorGlow from "./CursorGlow";
 
 const navLink = ({ isActive }) =>
-  `relative flex items-center gap-1.5 rounded-[10px] px-2.5 py-1.5 text-[13px] font-bold transition-all duration-300 group overflow-hidden ${
+  `relative flex items-center flex-shrink-0 gap-1.5 rounded-[10px] px-2.5 py-1.5 text-[13px] font-bold transition-all duration-300 group overflow-hidden ${
     isActive
       ? "text-white bg-gradient-to-r from-brand to-accent shadow-md shadow-brand/20"
       : "text-muted hover:text-ink hover:bg-brand/10 hover:shadow-sm"
