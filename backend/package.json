@@ -6,9 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "node server.js",
-    "seed": "node scripts/seedDemo.js",
-    "seed:clear": "node scripts/clearSeedDemo.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
