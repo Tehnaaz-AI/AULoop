@@ -16,7 +16,13 @@ export const sendSocketNotification = (userId, notification) => {
 export const configureSocket = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: (process.env.CLIENT_URL || "https://au-loop.vercel.app").split(",").map((origin) => origin.trim()),
+      origin: function (origin, callback) {
+        if (!origin || origin === "https://au-loop.vercel.app" || origin.startsWith("http://localhost:") || origin.endsWith(".vercel.app")) {
+          callback(null, true);
+        } else {
+          callback(new Error("Not allowed by CORS"));
+        }
+      },
       credentials: true
     }
   });
