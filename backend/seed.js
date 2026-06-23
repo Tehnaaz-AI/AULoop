@@ -38,6 +38,26 @@ const usersData = [
     trustScore: 91,
     completedSales: 10,
     avatar: { url: "https://randomuser.me/api/portraits/men/85.jpg" }
+  },
+  {
+    name: "Priya Sharma",
+    email: "priya.mentor@anurag.edu.in",
+    password: "password123",
+    department: "Civil Engineering",
+    year: "4th Year",
+    trustScore: 99,
+    completedSales: 32,
+    avatar: { url: "https://randomuser.me/api/portraits/women/65.jpg" }
+  },
+  {
+    name: "Rahul Verma",
+    email: "rahul.mentor@anurag.edu.in",
+    password: "password123",
+    department: "Information Technology",
+    year: "3rd Year",
+    trustScore: 88,
+    completedSales: 5,
+    avatar: { url: "https://randomuser.me/api/portraits/men/22.jpg" }
   }
 ];
 
@@ -115,6 +135,72 @@ const listingsData = [
     condition: "Like New",
     campusMeetupSpots: ["Sports Complex"],
     images: [{ url: "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=800&q=80", publicId: "dummy8" }]
+  },
+  {
+    title: "Sony WH-1000XM4 Headphones",
+    description: "Incredible noise cancellation. Comes with case and cables.",
+    price: 18000,
+    category: "Electronics",
+    condition: "Good",
+    campusMeetupSpots: ["Library"],
+    images: [{ url: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=800&q=80", publicId: "dummy9" }],
+    video: { url: "https://www.w3schools.com/html/mov_bbb.mp4", publicId: "vid2" }
+  },
+  {
+    title: "Mini Refrigerator for Hostel",
+    description: "Perfect for keeping drinks and snacks cold in your room.",
+    price: 3500,
+    category: "Hostel",
+    condition: "Fair",
+    campusMeetupSpots: ["Boys Hostel A"],
+    images: [{ url: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=800&q=80", publicId: "dummy10" }],
+    video: { url: "https://www.w3schools.com/html/mov_bbb.mp4", publicId: "vid3" }
+  },
+  {
+    title: "Yamaha Acoustic Guitar",
+    description: "F310 model, great for beginners. Need to sell because I'm graduating.",
+    price: 6000,
+    category: "Other",
+    condition: "Good",
+    campusMeetupSpots: ["Main Gate"],
+    images: [{ url: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=800&q=80", publicId: "dummy11" }],
+    video: { url: "https://www.w3schools.com/html/mov_bbb.mp4", publicId: "vid4" }
+  },
+  {
+    title: "Physics Textbook Vol 1 & 2",
+    description: "HC Verma Concepts of Physics. Essential for entrance exams and early college.",
+    price: 300,
+    category: "Books",
+    condition: "Like New",
+    campusMeetupSpots: ["Block 1"],
+    images: [{ url: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=800&q=80", publicId: "dummy12" }]
+  },
+  {
+    title: "Table Lamp",
+    description: "LED table lamp with adjustable brightness. Great for late night studying.",
+    price: 400,
+    category: "Hostel",
+    condition: "Good",
+    campusMeetupSpots: ["Girls Hostel B"],
+    images: [{ url: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80", publicId: "dummy13" }]
+  },
+  {
+    title: "Badminton Racket Yonex",
+    description: "Lightweight, good string tension. Used for one semester.",
+    price: 1200,
+    category: "Sports",
+    condition: "Like New",
+    campusMeetupSpots: ["Sports Complex"],
+    images: [{ url: "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=800&q=80", publicId: "dummy14" }]
+  },
+  {
+    title: "Microscope Slides (Box of 50)",
+    description: "Unused glass slides for biology lab.",
+    price: 150,
+    category: "Lab Gear",
+    condition: "Like New",
+    campusMeetupSpots: ["Biology Lab"],
+    images: [{ url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80", publicId: "dummy15" }]
   }
 ];
 
